@@ -1,10 +1,10 @@
 const brands = [
-  { name: "Maanos", tag: "Massages", text: "Des expériences de massage pensées pour offrir une parenthèse de récupération et de bien-être.", url: "https://www.maanos.com", tone: "sage" },
-  { name: "Smooden", tag: "Huiles de massage", text: "Des huiles développées pour le geste professionnel, le confort et l'expérience sensorielle.", url: "https://www.smooden.com", tone: "sand" },
-  { name: "MOLM", tag: "Chèques cadeaux", text: "Le cadeau bien-être simple à offrir, qui laisse à chacun la liberté de choisir son moment.", url: "https://www.molm-care.com", tone: "clay" },
-  { name: "Directa Luxembourg", tag: "Immobilier", text: "Une activité de marchand de biens dédiée à l'acquisition et à la valorisation d'actifs.", url: "https://directa-luxembourg.vercel.app/", tone: "ink" },
-  { name: "My Massage Shop", tag: "E-commerce", text: "Une sélection d'articles et de matériel de massage destinée aux particuliers et aux professionnels.", url: "https://www.mymassageshop.com", tone: "cream" },
-  { name: "De Coiffer", tag: "Salons de coiffure", text: "Des salons où savoir-faire, attention et sens du style façonnent une expérience personnelle.", url: "https://www.decoiffer.lu", tone: "rose" },
+  { name: "Maanos", tag: "Massages", text: "Des expériences de massage pensées pour offrir une parenthèse de récupération et de bien-être.", url: "https://www.maanos.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.maanos.com" },
+  { name: "Smooden", tag: "Huiles de massage", text: "Des huiles développées pour le geste professionnel, le confort et l'expérience sensorielle.", url: "https://www.smooden.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.smooden.com/fr" },
+  { name: "MOLM", tag: "Chèques cadeaux", text: "Le cadeau bien-être simple à offrir, qui laisse à chacun la liberté de choisir son moment.", url: "https://www.molm-care.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.molm-care.com/fr" },
+  { name: "Directa Luxembourg", tag: "Immobilier", text: "Une activité de marchand de biens dédiée à l'acquisition et à la valorisation d'actifs.", url: "https://directa-luxembourg.vercel.app/", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://directa-luxembourg.vercel.app/" },
+  { name: "My Massage Shop", tag: "E-commerce", text: "Une sélection d'articles et de matériel de massage destinée aux particuliers et aux professionnels.", url: "https://www.mymassageshop.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.mymassageshop.com" },
+  { name: "De Coiffer", tag: "Salons de coiffure", text: "Des salons où savoir-faire, attention et sens du style façonnent une expérience personnelle.", url: "https://www.decoiffer.lu", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.decoiffer.lu" },
 ];
 
 function Arrow() {
@@ -55,9 +55,10 @@ export default function Home() {
         </div>
         <div className="brandGrid shell">
           {brands.map((brand, index) => (
-            <a className={`brandCard ${brand.tone}`} href={brand.url} target="_blank" rel="noreferrer" key={brand.name}>
+            <a className="brandCard" href={brand.url} target="_blank" rel="noreferrer" key={brand.name}>
+              <div className="brandImage" style={{ backgroundImage: `linear-gradient(180deg, rgba(8,30,25,.02), rgba(8,30,25,.62)), url(${brand.image})` }} />
               <div className="cardTop"><span>{String(index + 1).padStart(2, "0")}</span><Arrow /></div>
-              <div><p>{brand.tag}</p><h3>{brand.name}</h3><div className="line" /><p className="description">{brand.text}</p></div>
+              <div className="cardCopy"><p>{brand.tag}</p><h3>{brand.name}</h3><div className="line" /><p className="description">{brand.text}</p></div>
             </a>
           ))}
         </div>
