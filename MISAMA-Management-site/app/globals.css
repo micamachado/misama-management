@@ -1,0 +1,62 @@
+:root { --ink:#18352e; --dark:#102923; --cream:#f3eee3; --paper:#faf8f2; --lime:#d9e98a; --line:rgba(24,53,46,.18); }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; color:var(--ink); background:var(--paper); font-family:var(--font-sans),sans-serif; }
+a { color:inherit; text-decoration:none; }
+.shell { width:min(1240px,calc(100% - 64px)); margin-inline:auto; }
+.nav { height:102px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); position:relative; z-index:2; }
+.wordmark { font-weight:800; letter-spacing:.14em; font-size:17px; }
+.wordmark span { display:block; font-size:9px; letter-spacing:.36em; font-weight:500; margin-top:4px; }
+.nav nav { display:flex; gap:38px; font-size:13px; }
+.nav nav a:hover { opacity:.55; }
+.navCta { border:1px solid var(--ink); border-radius:100px; padding:13px 19px; font-size:12px; }
+.hero { min-height:720px; padding:88px 0 50px; position:relative; overflow:hidden; }
+.eyebrow,.sectionLabel { font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+.eyebrow { display:flex; align-items:center; gap:12px; }
+.eyebrow span { width:34px; height:1px; background:currentColor; }
+.hero h1,.portfolioHead h2,.contact h2 { font-family:var(--font-display),serif; font-weight:500; }
+.hero h1 { font-size:clamp(78px,10.5vw,154px); line-height:.76; letter-spacing:-.055em; max-width:1000px; margin:94px 0 56px; position:relative; z-index:1; }
+em { font-weight:500; color:#8ca045; }
+.heroBottom { display:flex; align-items:end; justify-content:space-between; max-width:640px; position:relative; z-index:1; }
+.heroBottom p { font-size:15px; line-height:1.8; max-width:470px; margin:0; }
+.roundLink { width:52px; height:52px; border:1px solid var(--ink); border-radius:50%; display:grid; place-items:center; font-size:20px; }
+.heroArt { position:absolute; width:420px; height:520px; right:30px; top:115px; border-radius:220px 220px 24px 24px; background:var(--lime); overflow:hidden; transform:rotate(5deg); }
+.heroArt i { position:absolute; width:360px; height:360px; border:1px solid rgba(24,53,46,.28); border-radius:50%; top:80px; left:-130px; }
+.heroArt b { position:absolute; width:280px; height:280px; border-radius:50%; background:var(--dark); right:-80px; bottom:-50px; }
+.heroArt span { position:absolute; top:70px; right:45px; font-family:var(--font-display); font-size:60px; line-height:.55; }
+.heroArt small { font-family:var(--font-sans); font-size:10px; letter-spacing:.15em; text-transform:uppercase; }
+.intro,.model { padding:150px 0; display:grid; grid-template-columns:1fr 3fr; gap:40px; }
+.intro h2,.model h2 { font-family:var(--font-display); font-size:clamp(48px,6vw,82px); font-weight:500; line-height:.98; letter-spacing:-.035em; margin:0 0 52px; }
+.intro>div>p { max-width:620px; font-size:18px; line-height:1.8; }
+.principles { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); margin-top:76px; }
+.principles span { padding:24px 12px 0 0; font-size:12px; }
+.principles b { color:#9b8f75; margin-right:18px; }
+.portfolio { background:var(--dark); color:var(--cream); padding:130px 0 140px; }
+.light { color:#b8c2b2; }
+.portfolioHead { display:grid; grid-template-columns:1fr 2fr 1fr; gap:40px; align-items:end; margin-bottom:80px; }
+.portfolioHead h2 { font-size:clamp(56px,6vw,84px); line-height:.95; letter-spacing:-.035em; margin:0; }
+.portfolioHead p:last-child { font-size:13px; line-height:1.8; color:#b8c2b2; }
+.brandGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+.brandCard { aspect-ratio:.9; padding:28px; display:flex; flex-direction:column; justify-content:space-between; color:var(--ink); transition:transform .3s ease; }
+.brandCard:hover { transform:translateY(-7px); }
+.cardTop { display:flex; justify-content:space-between; font-size:13px; }
+.cardTop span { opacity:.55; }
+.cardTop span+span,.cardTop>span:last-child { font-size:24px; }
+.brandCard h3 { font-family:var(--font-display); font-size:40px; line-height:1; margin:8px 0 22px; font-weight:600; }
+.brandCard p { margin:0; font-size:10px; text-transform:uppercase; letter-spacing:.12em; }
+.brandCard .line { height:1px; background:currentColor; opacity:.28; margin-bottom:18px; }
+.brandCard .description { font-size:12px; text-transform:none; letter-spacing:0; line-height:1.7; max-width:90%; }
+.sage { background:#bdcfb5; }.sand { background:#d7c7a2; }.clay { background:#c98567; }.ink { background:#243f3a;color:#f3eee3; }.cream { background:#ede8dc; }.rose { background:#d9b5ac; }
+.modelGrid { display:grid; grid-template-columns:1fr 1fr; gap:70px; border-top:1px solid var(--line); padding-top:34px; }
+.modelGrid p { font-size:15px; line-height:1.9; margin:0; }
+.contact { background:#b7c96f; padding:130px 0 72px; }
+.contactInner h2 { font-size:clamp(60px,8vw,110px); line-height:.9; letter-spacing:-.04em; margin:76px 0 110px; max-width:1100px; }
+.contact h2 em { color:var(--paper); }
+.contactRow { border-top:1px solid rgba(24,53,46,.3); padding-top:28px; display:flex; justify-content:space-between; align-items:start; }
+.contactRow a { font-family:var(--font-display); font-size:32px; }
+.contactRow address { font-style:normal; font-size:13px; line-height:1.8; }
+footer { min-height:170px; display:flex; justify-content:space-between; align-items:center; font-size:11px; }
+footer p { opacity:.6; } footer>a { text-transform:uppercase; letter-spacing:.1em; }
+@media (max-width:900px){ .nav nav{display:none}.hero{min-height:760px}.heroArt{opacity:.45;right:-190px}.hero h1{margin-top:120px}.intro,.model{grid-template-columns:1fr;padding:100px 0}.portfolioHead{grid-template-columns:1fr}.brandGrid{grid-template-columns:1fr 1fr}.principles{grid-template-columns:1fr}.principles span{padding-bottom:18px}.modelGrid{gap:30px}.contactRow{gap:30px;flex-direction:column} }
+@media (max-width:600px){ .shell{width:calc(100% - 36px)}.nav{height:82px}.navCta{display:none}.hero{padding-top:70px;min-height:670px}.hero h1{font-size:65px;line-height:.82;margin:100px 0 45px}.heroBottom{align-items:center}.heroBottom p{font-size:13px;max-width:75%}.heroArt{width:330px;height:420px;top:140px;right:-190px}.intro h2,.model h2{font-size:49px}.brandGrid{grid-template-columns:1fr}.brandCard{aspect-ratio:1.15}.portfolio{padding:90px 0}.portfolioHead{margin-bottom:50px}.portfolioHead h2{font-size:54px}.modelGrid{grid-template-columns:1fr}.contact{padding-top:90px}.contactInner h2{font-size:54px;margin:60px 0 80px}.contactRow a{font-size:22px;word-break:break-all}footer{align-items:flex-start;padding:45px 0;min-height:190px;flex-direction:column} }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.brandCard{transition:none}}
