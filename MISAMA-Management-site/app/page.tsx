@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const brands = [
   { name: "Maanos", tag: "Expériences", text: "Le massage sur mesure, pensé comme un rituel de récupération profondément personnel.", url: "https://www.maanos.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.maanos.com" },
   { name: "Smooden", tag: "Produits", text: "Des huiles de massage naturelles développées pour le geste, la peau et les sens.", url: "https://www.smooden.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.smooden.com/fr" },
@@ -19,7 +21,7 @@ export default function Home() {
   return (
     <main id="top">
       <header className="nav shell">
-        <a className="wordmark" href="#top" aria-label="MISAMA Studio, accueil">MISAMA <span>STUDIO</span></a>
+        <a href="#top" aria-label="MISAMA Studio, accueil"><Image className="siteLogo" src="/images/logo-misama-studio-v2.png" alt="MISAMA Studio" width={1266} height={373} priority /></a>
         <nav aria-label="Navigation principale">
           <a href="#studio">Le studio</a><a href="#expertise">Notre savoir-faire</a><a href="#marques">Nos marques</a>
         </nav>
@@ -103,7 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="shell"><div className="wordmark">MISAMA <span>STUDIO</span></div><p>Wellness · Self-care · Beauty · Commerce</p><a href="#top">Retour en haut ↑</a></footer>
+      <footer className="shell"><Image className="siteLogo footerLogo" src="/images/logo-misama-studio-v2.png" alt="MISAMA Studio" width={1266} height={373} /><p>Wellness · Self-care · Beauty · Commerce</p><a href="#top">Retour en haut ↑</a></footer>
     </main>
   );
 }
