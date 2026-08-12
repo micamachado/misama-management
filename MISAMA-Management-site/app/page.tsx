@@ -1,96 +1,109 @@
 const brands = [
-  { name: "Maanos", tag: "Massages", text: "Des expériences de massage pensées pour offrir une parenthèse de récupération et de bien-être.", url: "https://www.maanos.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.maanos.com" },
-  { name: "Smooden", tag: "Huiles de massage", text: "Des huiles développées pour le geste professionnel, le confort et l'expérience sensorielle.", url: "https://www.smooden.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.smooden.com/fr" },
-  { name: "MOLM", tag: "Chèques cadeaux", text: "Le cadeau bien-être simple à offrir, qui laisse à chacun la liberté de choisir son moment.", url: "https://www.molm-care.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.molm-care.com/fr" },
-  { name: "Directa Luxembourg", tag: "Immobilier", text: "Une activité de marchand de biens dédiée à l'acquisition et à la valorisation d'actifs.", url: "https://directa-luxembourg.vercel.app/", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://directa-luxembourg.vercel.app/" },
-  { name: "My Massage Shop", tag: "E-commerce", text: "Une sélection d'articles et de matériel de massage destinée aux particuliers et aux professionnels.", url: "https://www.mymassageshop.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.mymassageshop.com" },
-  { name: "De Coiffer", tag: "Salons de coiffure", text: "Des salons où savoir-faire, attention et sens du style façonnent une expérience personnelle.", url: "https://www.decoiffer.lu", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.decoiffer.lu" },
+  { name: "Maanos", tag: "Expériences", text: "Le massage sur mesure, pensé comme un rituel de récupération profondément personnel.", url: "https://www.maanos.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.maanos.com" },
+  { name: "Smooden", tag: "Produits", text: "Des huiles de massage naturelles développées pour le geste, la peau et les sens.", url: "https://www.smooden.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.smooden.com/fr" },
+  { name: "MOLM", tag: "Gifting", text: "Le cadeau bien-être qui met le choix, l'attention et l'expérience au centre.", url: "https://www.molm-care.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.molm-care.com/fr" },
+  { name: "My Massage Shop", tag: "Commerce", text: "La destination e-commerce des produits et équipements dédiés au massage.", url: "https://www.mymassageshop.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.mymassageshop.com" },
+  { name: "De Coiffer", tag: "Beauté", text: "Des salons où expertise, style et confiance en soi forment une expérience singulière.", url: "https://www.decoiffer.lu", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.decoiffer.lu" },
+  { name: "Directa Luxembourg", tag: "Lieux", text: "L'acquisition et la valorisation d'actifs immobiliers au service de projets durables.", url: "https://directa-luxembourg.vercel.app/", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://directa-luxembourg.vercel.app/" },
 ];
 
-function Arrow() {
-  return <span aria-hidden="true">↗</span>;
-}
+const pillars = [
+  { number: "01", title: "Développer", text: "Nous transformons une intuition en une marque désirable : positionnement, identité, offre et expérience." },
+  { number: "02", title: "Commercialiser", text: "Nous construisons les bons canaux, du lieu physique au digital, pour rapprocher chaque marque de son public." },
+  { number: "03", title: "Faire grandir", text: "Nous mutualisons stratégie, opérations et savoir-faire pour créer une croissance cohérente et durable." },
+];
+
+function Arrow() { return <span aria-hidden="true">↗</span>; }
 
 export default function Home() {
   return (
-    <main>
+    <main id="top">
       <header className="nav shell">
-        <a className="wordmark" href="#top" aria-label="MISAMA Management, accueil">MISAMA <span>Management</span></a>
+        <a className="wordmark" href="#top" aria-label="MISAMA Studio, accueil">MISAMA <span>STUDIO</span></a>
         <nav aria-label="Navigation principale">
-          <a href="#groupe">Le groupe</a>
-          <a href="#activites">Nos activités</a>
-          <a href="#contact">Contact</a>
+          <a href="#studio">Le studio</a><a href="#expertise">Notre savoir-faire</a><a href="#marques">Nos marques</a>
         </nav>
-        <a className="navCta" href="mailto:contact@misama-management.com">Nous contacter</a>
+        <a className="navCta" href="mailto:contact@misama-management.com">Parlons-nous <Arrow /></a>
       </header>
 
-      <section className="hero shell" id="top">
-        <div className="eyebrow"><span /> Luxembourg · Entreprendre avec sens</div>
-        <h1>Des idées qui prennent <em>forme.</em></h1>
-        <div className="heroBottom">
-          <p>MISAMA Management est un groupe entrepreneurial luxembourgeois qui développe des marques, des expériences et des actifs à fort potentiel.</p>
-          <a className="roundLink" href="#activites" aria-label="Découvrir nos activités">↓</a>
+      <section className="hero shell">
+        <div className="heroCopy">
+          <p className="kicker">Brand studio · Luxembourg</p>
+          <h1>Nous créons les marques qui font du <em>bien.</em></h1>
+          <div className="heroStatement">
+            <p>MISAMA est un studio spécialisé dans le développement, la commercialisation et le commerce de marques de bien-être, wellness et self-care.</p>
+            <a href="#studio">Découvrir le studio <span>↓</span></a>
+          </div>
         </div>
-        <div className="heroArt" aria-hidden="true"><i /><b /><span>6<br /><small>activités</small></span></div>
+        <div className="heroVisual" role="img" aria-label="Rituel de soin et de bien-être">
+          <span className="heroBadge">Care<br />in every<br />detail.</span>
+        </div>
       </section>
 
-      <section className="intro shell" id="groupe">
-        <p className="sectionLabel">01 — Le groupe</p>
-        <div>
-          <h2>Construire aujourd'hui<br />les références de demain.</h2>
-          <p>Nous réunissons des activités complémentaires dans le bien-être, la beauté, le commerce et l'immobilier. Notre rôle : donner à chaque projet une vision claire, une structure solide et l'espace nécessaire pour grandir.</p>
-          <div className="principles">
-            <span><b>01</b> Vision long terme</span>
-            <span><b>02</b> Excellence opérationnelle</span>
-            <span><b>03</b> Synergies concrètes</span>
+      <section className="manifesto" id="studio">
+        <div className="shell manifestoGrid">
+          <p className="sectionLabel">01 — Le studio</p>
+          <div>
+            <p className="lead">Nous croyons que prendre soin de soi n'est plus un luxe. C'est une nouvelle façon de vivre, de consommer et de créer du lien.</p>
+            <div className="manifestoText">
+              <p>MISAMA imagine, lance et développe des concepts qui placent le mieux-être au cœur du quotidien. Nous réunissons sous un même studio des expériences, des produits, des services et des lieux.</p>
+              <p>Chaque marque conserve sa personnalité. Toutes bénéficient d'une vision commune, d'une exigence partagée et d'un écosystème conçu pour accélérer leur développement.</p>
+            </div>
+          </div>
+        </div>
+        <div className="imageRibbon shell" aria-hidden="true">
+          <div className="ribbonImage ritual"/><div className="ribbonQuote">Feel better.<br/><em>Live better.</em></div><div className="ribbonImage texture"/>
+        </div>
+      </section>
+
+      <section className="expertise" id="expertise">
+        <div className="shell">
+          <div className="sectionHead">
+            <p className="sectionLabel">02 — Notre savoir-faire</p>
+            <h2>De l'idée au marché,<br/><em>un seul studio.</em></h2>
+          </div>
+          <div className="pillarGrid">
+            {pillars.map((pillar) => <article key={pillar.number}><span>{pillar.number}</span><h3>{pillar.title}</h3><p>{pillar.text}</p></article>)}
           </div>
         </div>
       </section>
 
-      <section className="portfolio" id="activites">
+      <section className="portfolio" id="marques">
         <div className="shell portfolioHead">
-          <p className="sectionLabel light">02 — Notre écosystème</p>
-          <h2>Six activités.<br /><em>Une même ambition.</em></h2>
-          <p>Des marques autonomes, reliées par une culture commune : l'attention portée à l'expérience, à la qualité et à la création de valeur durable.</p>
+          <p className="sectionLabel">03 — Notre écosystème</p>
+          <h2>Des marques singulières.<br/><em>Une vision partagée.</em></h2>
+          <p>Un portefeuille construit autour des nouveaux usages du soin, de la beauté, du bien-être et de leurs espaces.</p>
         </div>
         <div className="brandGrid shell">
           {brands.map((brand, index) => (
             <a className="brandCard" href={brand.url} target="_blank" rel="noreferrer" key={brand.name}>
-              <div className="brandImage" style={{ backgroundImage: `linear-gradient(180deg, rgba(8,30,25,.02), rgba(8,30,25,.62)), url(${brand.image})` }} />
-              <div className="cardTop"><span>{String(index + 1).padStart(2, "0")}</span><Arrow /></div>
-              <div className="cardCopy"><p>{brand.tag}</p><h3>{brand.name}</h3><div className="line" /><p className="description">{brand.text}</p></div>
+              <div className="brandImage" style={{backgroundImage:`linear-gradient(180deg,rgba(41,31,27,.02),rgba(41,31,27,.76)),url(${brand.image})`}} />
+              <div className="cardTop"><span>{String(index+1).padStart(2,"0")}</span><Arrow/></div>
+              <div className="cardCopy"><p>{brand.tag}</p><h3>{brand.name}</h3><div className="line"/><p className="description">{brand.text}</p></div>
             </a>
           ))}
         </div>
       </section>
 
-      <section className="model shell">
-        <p className="sectionLabel">03 — Notre modèle</p>
-        <div>
-          <h2>Créer des passerelles,<br />multiplier les possibles.</h2>
-          <div className="modelGrid">
-            <p>Nos expertises se répondent : les lieux accueillent les expériences, les produits prolongent le geste, le digital élargit l'accès et l'immobilier ancre notre développement.</p>
-            <p>Cette approche transversale nous permet d'accompagner chaque activité avec agilité, tout en conservant l'identité et la singularité de chaque marque.</p>
-          </div>
+      <section className="platform shell">
+        <p className="sectionLabel">04 — La plateforme</p>
+        <div><h2>Le wellness,<br/>sous toutes ses formes.</h2>
+          <div className="platformRows"><span>Expériences & services</span><span>Produits & formulation</span><span>E-commerce & distribution</span><span>Retail & lieux</span></div>
         </div>
       </section>
 
       <section className="contact" id="contact">
-        <div className="shell contactInner">
-          <p className="sectionLabel light">04 — Contact</p>
-          <h2>Parlons de ce que nous<br />pourrions construire <em>ensemble.</em></h2>
-          <div className="contactRow">
-            <a href="mailto:contact@misama-management.com">contact@misama-management.com <Arrow /></a>
-            <address>26, avenue de la Faïencerie<br />L-1510 Luxembourg</address>
-          </div>
+        <div className="contactPhoto" aria-hidden="true" />
+        <div className="contactCopy">
+          <p className="sectionLabel">05 — Construisons ensemble</p>
+          <h2>Une marque à révéler.<br/><em>Une idée à faire grandir.</em></h2>
+          <p>Entrepreneurs, partenaires, talents ou propriétaires : parlons de ce que nous pourrions construire ensemble.</p>
+          <a href="mailto:contact@misama-management.com">contact@misama-management.com <Arrow/></a>
+          <address>26, avenue de la Faïencerie<br/>L-1510 Luxembourg</address>
         </div>
       </section>
 
-      <footer className="shell">
-        <div className="wordmark">MISAMA <span>Management</span></div>
-        <p>© {new Date().getFullYear()} MISAMA Management</p>
-        <a href="#top">Retour en haut ↑</a>
-      </footer>
+      <footer className="shell"><div className="wordmark">MISAMA <span>STUDIO</span></div><p>Wellness · Self-care · Beauty · Commerce</p><a href="#top">Retour en haut ↑</a></footer>
     </main>
   );
 }
