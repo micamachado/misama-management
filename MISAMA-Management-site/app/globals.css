@@ -137,7 +137,7 @@ a {
 }
 .heroVisual {
   min-height: 620px;
-  background: url("/images/hero-massage-misama.png") center/cover;
+  background: url("/images/01-cabine-massage.png") center/cover;
   position: relative;
   border-radius: 260px 260px 18px 18px;
 }
@@ -206,10 +206,10 @@ a {
   background-position: center;
 }
 .ritual {
-  background-image: url("https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&q=85");
+  background-image: url("/images/02-massage.png");
 }
 .texture {
-  background-image: url("https://images.unsplash.com/photo-1612817288484-6f916006741a?auto=format&fit=crop&w=900&q=85");
+  background-image: url("/images/03-espace-soins.png");
 }
 .ribbonQuote {
   background: var(--espresso);
@@ -394,8 +394,7 @@ a {
   background: var(--taupe-pale);
 }
 .contactPhoto {
-  background: url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1400&q=85")
-    center/cover;
+  background: url("/images/04-misama-studio.png") center/cover;
 }
 .contactCopy {
   padding: 100px clamp(40px, 7vw, 120px);
